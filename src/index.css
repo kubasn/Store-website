@@ -41,13 +41,7 @@ footer{
   color:#ffffff
 }
 
-.row{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: space-between;
-  align-items: center;
-  font-size:0.8rem;
-}
+
 
 a.brand {
   font-size:1.1rem;
@@ -57,36 +51,86 @@ a.brand {
 a.brand:hover{
   color:#000000
 }
+button{
+  padding:1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgb(185, 183, 183); 
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(250, 184, 16);
+  cursor: pointer;
+}
+button.primary{
+  margin-top: 1rem;
+    background-color: rgb(250, 184, 16);
+}
+button.block{
+  width: 100%;
+}
+button:hover{
+  border:0.1rem solid hsl(0, 3%, 61%);
+}
 
+/***********/
 header a{
   
   color:white;
   padding: 1rem; /* 1rem w tym przypadku 10px  */
 }
 a:hover{
-  color:#c2c1c1
+  color:#c2c1c1;
+}
+url{
+  padding:0;
+  margin:0;
+  list-style-type: none;
 }
 a{
   text-decoration: none;
   color:#000000;
   font-weight: bold;
 }
+li{
+  margin-top: 1rem;
+}
 
+
+.row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size:0.8rem;
+}
 .row.center{
   justify-content: center;
 }
-
+.row.top{
+  align-items: flex-start;
+  }
 img {
   border-radius: 0.5rem;
 }
-
 img.medium {
   max-width: 10rem;
   width: 100%;
 }
+img.large{
+width:100%
+}
+
+.col-1{
+  flex: 2 1 10rem;
+}
+.col-2{
+  flex: 2 1 10rem;
+}
+
+
 
 .card{
-  border:0.1rem #444444 solid; /*1px */
+  border:0.1rem #c2c1c1 solid; /*1px */
   background-color:#f3f3f3;
   border-radius: 0.5rem;
   margin: 1rem;
@@ -96,13 +140,13 @@ h1{
 }
 
 .card-body {
-  padding: 0.5rem;
+  padding: 0.1rem;
 }
 .card-body > *{     /*przepisanie stylow do child-element */
-margin-bottom: 0.5rem;
+margin-bottom: 0.1rem;
 }
 .card:hover{
-border:0.1rem #ffd700 solid;
+border:0.1rem rgb(141, 139, 139) solid;
 }
 
 p{
@@ -118,4 +162,32 @@ p{
 .rating span{
   color:#ffd700;
   margin: 0.1rem;
+}
+.rating span:last-child {
+  color:#000000;
+}
+
+/*Alert */
+.success{
+  color:hsl(120, 79%, 26%);
+  font-weight: bold;
+}
+.danger{
+  color:hsl(0, 71%, 49%);
+  font-weight: bold;
+}
+.alert{
+  padding: 1rem;
+  border:0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.alert-info{
+  color:#70d4d4;
+  background-color:#e0e0ff;
+}
+
+.alert-danger{
+  color:#ff0000;
+  background-color:hsl(0, 63%, 82%);
 }
